@@ -1,0 +1,32 @@
+@import "@styles/variables.scss";
+
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: $big-indent;
+    padding-right: $big-indent;
+
+    min-height: 100px;
+
+    background-color: $black-color;
+
+    color: $white-color;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: $desktop-width) {
+    .footer {
+        padding-left: $average-indent;
+        padding-right: $average-indent;
+    }
+}
+
+@media screen and (max-width: $phone-album-width) {
+    .footer {
+        padding-left: $small-indent;
+        padding-right: $small-indent;
+    }
+}

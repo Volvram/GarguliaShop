@@ -1,0 +1,61 @@
+@import "@styles/variables.scss";
+
+.header {
+    padding-left: $big-indent;
+    padding-right: $big-indent;
+
+    min-height: 100px;
+
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+
+    &_shop {
+        font-family: $cormorantSC;
+        font-size: $big-font;
+        font-weight: 700;
+    }
+
+    &_sections {
+        margin-left: auto;
+
+        display: flex;
+        &_section {
+            margin-left: 20px;
+            margin-right: 20px;
+
+            color: $black-color;
+            text-decoration: none;
+
+            font-family: $cormorantSC;
+            font-size: $big-font;
+            font-weight: 700;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-portrait-width) {
+    .header {
+        padding-left: $average-indent;
+        padding-right: $average-indent;
+    }
+}
+
+@media screen and (max-width: $phone-album-width) {
+    .header {
+        padding-left: $small-indent;
+        padding-right: $small-indent;
+
+        &_shop {
+            font-size: $average-font;
+        }
+
+        &_sections {
+
+            &_section {
+                font-size: $average-font;
+            }
+        }
+    }
+}

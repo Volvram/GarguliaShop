@@ -1,0 +1,79 @@
+@import "@styles/variables.scss";
+
+.contacts {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    width: fit-content;
+
+    border-left: 1px solid $white-color;
+    border-right: 1px solid $white-color;
+
+    &_h {
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        width: fit-content;
+
+        border-bottom: 1px dashed $white-color;
+    }
+
+    &_countries {
+        display: flex;
+
+        &_country {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            list-style: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &_h {
+                margin-bottom: 10px;
+
+                text-align: left;
+            }
+
+            &_contact {
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+                text-align: left;
+                &_a {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .contacts {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media screen and (max-width: $desktop-width) {
+    .contacts {
+        margin-top: 10px;
+        padding: 10px 0%;
+
+        border-top: 1px solid $white-color;
+        border-bottom: 1px solid $white-color;
+
+        border-left: 0px;
+        border-right: 0px;
+    }
+}
+
+@media screen and (max-width: $phone-album-width) {
+    .contacts {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
