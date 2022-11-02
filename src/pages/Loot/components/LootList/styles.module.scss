@@ -1,6 +1,41 @@
 @import "@styles/variables.scss";
 
+$active-color: $dark-grey-color;
+
+.paginator {
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-left: 0px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: $montserrat;
+  font-size: $big-font;
+
+  &_li {
+    cursor: pointer;
+    list-style: none;
+
+    color: $white-color;
+
+    padding: 0px 2px;
+
+    &_active {
+      box-sizing: border-box;
+      color: $active-color;
+      border-bottom: 2px solid $active-color;
+      border-radius: 2px;
+    }
+  }
+}
+
 .lootList {
+    padding-top: $average-indent;
+    padding-bottom: $average-indent;
+    padding-left: $average-indent;
+    padding-right: $average-indent;
+
     min-height: 700px;
 
     background-size: 100%;
@@ -8,3 +43,11 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@media screen and (max-width: $phone-album-width) {
+    .lootList {
+        padding-left: $small-indent;
+        padding-right: $small-indent;
+    }
+}
+

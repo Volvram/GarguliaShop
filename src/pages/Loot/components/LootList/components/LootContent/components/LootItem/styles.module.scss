@@ -1,0 +1,83 @@
+@import "@styles/variables.scss";
+
+.lootItem {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    padding-bottom: 20px;
+
+    background-color: $white-color;
+
+    width: 500px;
+
+    border: 2px solid $white-color;
+
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    font-family: $montserrat;
+    font-size: $average-font;
+
+    &_img {
+        width: inherit;
+    }
+
+    &_info {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        display: flex;
+        justify-content: space-between;
+    
+        &_title {
+            width: fit-content;
+        }
+
+        &_description {
+            width: fit-content;
+            max-width: 67%;
+
+            text-align: right;
+
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-portrait-width) {
+    .lootItem {
+        width: 440px;
+
+        font-size: 16px;
+
+        &_info {
+    
+            &_description {
+    
+                font-size: $small-font;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $phone-album-width) {
+    .lootItem {
+        margin-left: $small-indent;
+        margin-right: $small-indent;
+
+        width: 284px;
+
+        font-size: $small-font;
+
+        &_info {
+    
+            &_description {
+    
+                font-size: 12px;
+            }
+        }
+    }
+}
