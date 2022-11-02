@@ -10,6 +10,7 @@ const App: React.FC = () => {
     <div className="App">
       <Routes>
         <Route path="/" element={<Loot />} />
+        <Route path="/services" element={<></>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
