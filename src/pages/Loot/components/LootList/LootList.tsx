@@ -18,13 +18,13 @@ const LootList: React.FC = () => {
   React.useEffect(() => {
     // const initialPage = rootStore.query.getParam(queryParamsEnum.page);
     // if (initialPage) {
-    //   coinListStore.setItemOffset(
-    //     coinListStore.itemsPerPage * (Number(initialPage) - 1)
+    //   lootListStore.setItemOffset(
+    //     lootListStore.itemsPerPage * (Number(initialPage) - 1)
     //   );
     // } else {
-    //   coinListStore.setItemOffset(0);
+      lootListStore.setItemOffset(0);
     // }
-    // coinListStore.changePage();
+    lootListStore.changePage();
   }, []);
 
   const handlePage = React.useCallback(
@@ -41,7 +41,7 @@ const LootList: React.FC = () => {
       className={styles.lootList}
       style={{ backgroundImage: `url(${background_1})` }}
     >
-      <LootContent />
+      <LootContent currentItems={lootListStore.currentItems} />
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"

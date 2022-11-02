@@ -13,8 +13,8 @@ class LootListStore implements ILocalStore {
 
   // fields for pagination
   private _currentItems: EquipmentType[] | null = null;
-  private _pageCount = 0;
-  private _itemsPerPage = 5;
+  private _pageCount = 1;
+  private _itemsPerPage = 6;
   private _itemOffset = -1;
 
   constructor() {

@@ -1,14 +1,18 @@
 import React from "react";
 
-import { EQUIPMENT } from "@config/equipment";
+import { EQUIPMENT, EquipmentType } from "@config/equipment";
 
 import LootItem from "./components/LootItem/LootItem";
 import styles from "./styles.module.scss";
 
-const LootContent: React.FC = () => {
+type LootContentType = {
+  currentItems: EquipmentType[] | null;
+}
+
+const LootContent: React.FC<LootContentType> = ({currentItems}) => {
   return (
     <div className={styles.lootContent}>
-      {EQUIPMENT.map((item) => {
+      {currentItems && currentItems.map((item) => {
         return <LootItem key={item.id} item={item} />;
       })}
     </div>
