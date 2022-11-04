@@ -1,3 +1,4 @@
+import classic from "@assets/img/classic.jpg";
 import facingKing from "@assets/img/facingKing.jpg";
 import localKiller from "@assets/img/localKiller.jpg";
 import recoilKing from "@assets/img/recoilKing.jpg";
@@ -48,6 +49,15 @@ export const EQUIPMENT: EquipmentType[] = [
     description:
       "В 6 броне стальной фронт 1 освинцованная ткань и 2 фабриолита",
     price: 350,
+    currency: "rub",
+    type: "set",
+  },
+  {
+    id: "classic",
+    title: "Классика",
+    image: classic,
+    description: "В классической 6 броне 1 освинцованная ткань",
+    price: 80,
     currency: "rub",
     type: "set",
   },
