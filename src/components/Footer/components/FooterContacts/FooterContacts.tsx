@@ -28,10 +28,10 @@ const FooterContacts: React.FC = () => {
           <li className={styles.contacts_countries_country_contact}>
             Телеграм:{" "}
             <a
-              href="https://web.telegram.org/k/#@next_gargylia"
+              href="https://web.telegram.org/k/#@codMADARA"
               className={styles.contacts_countries_country_contact_a}
             >
-              @next_gargylia
+              @codMADARA
             </a>
           </li>
         </div>

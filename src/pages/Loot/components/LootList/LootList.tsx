@@ -2,6 +2,7 @@ import React from "react";
 
 import background_1 from "@assets/img/background_1.htm";
 import LootListStore from "@store/LootListStore";
+import rootStore from "@store/RootStore/instance";
 import { useLocalStore } from "@utils/useLocalStore";
 import { observer } from "mobx-react-lite";
 import ReactPaginate from "react-paginate";
@@ -16,16 +17,16 @@ const LootList: React.FC = () => {
   const lootListStore = useLocalStore(() => new LootListStore());
 
   React.useEffect(() => {
-    // const initialPage = rootStore.query.getParam(queryParamsEnum.page);
-    // if (initialPage) {
-    //   lootListStore.setItemOffset(
-    //     lootListStore.itemsPerPage * (Number(initialPage) - 1)
-    //   );
-    // } else {
+    const initialPage = rootStore.query.getParam("page");
+    if (initialPage) {
+      lootListStore.setItemOffset(
+        lootListStore.itemsPerPage * (Number(initialPage) - 1)
+      );
+    } else {
       lootListStore.setItemOffset(0);
-    // }
+    }
     lootListStore.changePage();
-  }, []);
+  }, [lootListStore]);
 
   const handlePage = React.useCallback(
     (event: { selected: number }) => {
@@ -33,7 +34,7 @@ const LootList: React.FC = () => {
       searchParams.set("page", `${event.selected + 1}`);
       setSearchParams(searchParams);
     },
-    [searchParams]
+    [searchParams, setSearchParams, lootListStore]
   );
 
   return (
@@ -46,11 +47,11 @@ const LootList: React.FC = () => {
         breakLabel="..."
         nextLabel=">"
         onPageChange={handlePage}
-        // forcePage={
-        //   rootStore.query.getParam(queryParamsEnum.page) !== undefined
-        //     ? Number(rootStore.query.getParam(queryParamsEnum.page)) - 1
-        //     : 0
-        // }
+        forcePage={
+          rootStore.query.getParam("page") !== undefined
+            ? Number(rootStore.query.getParam("page")) - 1
+            : 0
+        }
         pageRangeDisplayed={3}
         pageCount={lootListStore.pageCount}
         previousLabel="<"

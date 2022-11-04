@@ -12,7 +12,7 @@ type LootItemType = {
 const LootItem: React.FC<LootItemType> = ({ item }) => {
   return (
     <div className={styles.lootItem}>
-      <img src={item.image} className={styles.lootItem_img} />
+      <img src={item.image} className={styles.lootItem_img} alt="loot item" />
       <div className={styles.lootItem_info}>
         <div className={styles.lootItem_info_title}>{item.title}</div>
         <div className={styles.lootItem_info_description}>

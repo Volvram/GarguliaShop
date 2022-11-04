@@ -1,0 +1,22 @@
+@import "@styles/variables.scss";
+
+.servicesList {
+    padding-top: $average-indent;
+    padding-bottom: $average-indent;
+    padding-left: $average-indent;
+    padding-right: $average-indent;
+
+    min-height: 700px;
+
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: $phone-album-width) {
+    .servicesList {
+        padding-left: $small-indent;
+        padding-right: $small-indent;
+    }
+}
