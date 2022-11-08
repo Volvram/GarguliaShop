@@ -8,7 +8,7 @@
 
     padding-bottom: 20px;
 
-    background-color: $white-color;
+    background-color: rgba(21, 16, 0, 0.883);
 
     width: 500px;
 
@@ -25,7 +25,6 @@
 
     &_info {
         margin-top: 10px;
-        margin-bottom: 10px;
         margin-left: 10px;
         margin-right: 10px;
 
@@ -33,17 +32,50 @@
         justify-content: space-between;
     
         &_title {
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+
             width: fit-content;
+
+            border-right: 2px solid $dark-grey-color;
+
+            color: $white-color;
+
+            text-align: center;
+
+            display: flex;
+            align-items: center;
         }
 
         &_description {
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+
             width: fit-content;
             max-width: 67%;
+
+            color: $white-color;
 
             text-align: right;
 
             font-size: 18px;
-        }
+
+            display: flex;
+            align-items: center;
+        } 
+    }
+
+    &_price {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        padding-top: 10px;
+
+        border-top: 2px solid $dark-grey-color;
+
+        color: $golden-color;
     }
 }
 

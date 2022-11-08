@@ -31,6 +31,10 @@
             font-family: $cormorantSC;
             font-size: $big-font;
             font-weight: 700;
+
+            &__selected {
+                border-bottom: 2px solid $black-color;
+            }
         }
     }
 }

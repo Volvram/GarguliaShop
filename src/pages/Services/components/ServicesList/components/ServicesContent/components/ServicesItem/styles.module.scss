@@ -1,0 +1,71 @@
+@import "@styles/variables.scss";
+
+.servicesItem {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    padding: 20px;
+
+    background-color: rgba(21, 16, 0, 0.883);
+
+    width: 310px;
+    height: 200px;
+
+    border-top: 2px solid $white-color;
+    border-bottom: 2px solid $white-color;
+
+    border-radius: 30px;
+
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    font-family: $montserrat;
+    font-size: $average-font;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &_title {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        width: fit-content;
+
+        border-left: 2px solid $golden-color;
+        border-right: 2px solid $golden-color;
+
+        border-radius: 6px;
+
+        color: $white-color;
+    }
+
+    &_description {
+        color: $white-color;
+    }
+
+    &_price {
+        color: $golden-color;
+    }
+}
+
+@media screen and (max-width: $tablet-portrait-width) {
+    .servicesItem {
+
+        font-size: 16px;
+
+    }
+}
+
+@media screen and (max-width: $phone-album-width) {
+    .servicesItem {
+        margin-left: $small-indent;
+        margin-right: $small-indent;
+
+        width: 284px;
+
+        font-size: $small-font;
+    }
+}

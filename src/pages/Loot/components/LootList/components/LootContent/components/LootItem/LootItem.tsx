@@ -14,7 +14,9 @@ const LootItem: React.FC<LootItemType> = ({ item }) => {
     <div className={styles.lootItem}>
       <img src={item.image} className={styles.lootItem_img} alt="loot item" />
       <div className={styles.lootItem_info}>
-        <div className={styles.lootItem_info_title}>{item.title}</div>
+        <div className={styles.lootItem_info_title}>
+          <strong>{item.title}</strong>
+        </div>
         <div className={styles.lootItem_info_description}>
           {item.description}
         </div>
