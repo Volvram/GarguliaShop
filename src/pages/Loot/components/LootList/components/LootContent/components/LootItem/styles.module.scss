@@ -11,6 +11,7 @@
     background-color: rgba(21, 16, 0, 0.883);
 
     width: 500px;
+    min-height: 450px;
 
     border: 2px solid $white-color;
 
@@ -20,7 +21,6 @@
     font-size: $average-font;
 
     transition: all 1s ease-out;
-    
     animation: smoothAppearance 1s linear;
 
     &_img {
@@ -100,7 +100,10 @@
 
 @media screen and (max-width: $tablet-portrait-width) {
     .lootItem {
+        padding-bottom: 15px;
+
         width: 440px;
+        min-height: 400px;
 
         font-size: 16px;
 
@@ -119,7 +122,10 @@
         margin-left: $small-indent;
         margin-right: $small-indent;
 
+        padding-bottom: 10px;
+
         width: 284px;
+        min-height: 300px;
 
         font-size: $small-font;
 
