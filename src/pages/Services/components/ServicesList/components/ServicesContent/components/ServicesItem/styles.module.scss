@@ -28,6 +28,8 @@
     justify-content: space-between;
     align-items: center;
 
+    transition: all 1s ease-out;
+
     &_title {
         padding-left: 10px;
         padding-right: 10px;
@@ -49,6 +51,10 @@
     &_price {
         color: $golden-color;
     }
+}
+
+.servicesItem:hover {
+    transform: translate(10px, 10px);
 }
 
 @media screen and (max-width: $tablet-portrait-width) {

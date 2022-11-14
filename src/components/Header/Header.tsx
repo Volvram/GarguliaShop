@@ -1,7 +1,6 @@
 import React from "react";
 
 import { SECTIONS } from "@config/sections";
-import { log } from "@utils/log";
 import cn from "classnames";
 import { Link, useLocation } from "react-router-dom";
 

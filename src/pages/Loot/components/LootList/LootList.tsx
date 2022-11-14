@@ -33,6 +33,7 @@ const LootList: React.FC = () => {
       lootListStore.handlePageClick(event);
       searchParams.set("page", `${event.selected + 1}`);
       setSearchParams(searchParams);
+      window.scrollTo(0, 0);
     },
     [searchParams, setSearchParams, lootListStore]
   );

@@ -19,6 +19,10 @@
     font-family: $montserrat;
     font-size: $average-font;
 
+    transition: all 1s ease-out;
+    
+    animation: smoothAppearance 1s linear;
+
     &_img {
         width: inherit;
     }
@@ -77,6 +81,21 @@
 
         color: $golden-color;
     }
+}
+
+@keyframes smoothAppearance {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.lootItem:hover {
+    transform: translate(10px, 10px);
 }
 
 @media screen and (max-width: $tablet-portrait-width) {
