@@ -2,6 +2,7 @@ import React from "react";
 
 import background_1 from "@assets/img/background_1.htm";
 import LootListStore from "@store/LootListStore";
+import { useQueryParamsStoreInit } from "@store/RootStore/hooks/useQueryParamsStoreInit";
 import rootStore from "@store/RootStore/instance";
 import { useLocalStore } from "@utils/useLocalStore";
 import { observer } from "mobx-react-lite";
@@ -15,6 +16,7 @@ const LootList: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const lootListStore = useLocalStore(() => new LootListStore());
+  useQueryParamsStoreInit();
 
   React.useEffect(() => {
     const initialPage = rootStore.query.getParam("page");
