@@ -12,7 +12,7 @@ const FooterContacts: React.FC = () => {
             Российская Федерация:
           </li>
           <li className={styles.contacts_countries_country_contact}>
-            Телеграм:
+            Телеграм:{" "}
             <a
               href="https://t.me/next_gargylia"
               className={styles.contacts_countries_country_contact_a}
