@@ -20,6 +20,10 @@
     font-family: $montserrat;
     font-size: $average-font;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     transition: all 1s ease-out;
     animation: smoothAppearance 1s linear;
 

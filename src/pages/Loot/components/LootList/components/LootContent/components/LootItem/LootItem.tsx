@@ -22,7 +22,8 @@ const LootItem: React.FC<LootItemType> = ({ item }) => {
         </div>
       </div>
       <div className={styles.lootItem_price}>
-        {formatCurrency(item.price, item.currency)}
+        {formatCurrency(item.minPrice, item.currency)}
+        {item.maxPrice && ` - ${formatCurrency(item.maxPrice, item.currency)}`}
       </div>
     </div>
   );

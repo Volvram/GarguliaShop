@@ -6,6 +6,7 @@ import fastTravel from "@assets/img/fastTravel.jpg";
 import light from "@assets/img/light.jpg";
 import localKiller from "@assets/img/localKiller.jpg";
 import lotOfSpace from "@assets/img/lotOfSpace.jpg";
+import noImage from "@assets/img/noImage.jpg";
 import recoilKing from "@assets/img/recoilKing.jpg";
 import stockWithoutMk from "@assets/img/stockWithoutMk.jpg";
 import stockWithRad from "@assets/img/stockWithRad.jpg";
@@ -18,7 +19,8 @@ export type EquipmentType = {
   title: string;
   image: string;
   description: string;
-  price: number;
+  maxPrice: number | null;
+  minPrice: number;
   currency: string;
   type: string;
 };
@@ -29,7 +31,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Убийца локалки",
     image: localKiller,
     description: "В 6 броне стальной фронт 3 нейлоновых ремня высшего качества",
-    price: 350,
+    maxPrice: null,
+    minPrice: 350,
     currency: "rub",
     type: "set",
   },
@@ -38,7 +41,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Король выкладки",
     image: facingKing,
     description: "В 6 броне стальной фронт 3 освинцованные ткани",
-    price: 400,
+    maxPrice: null,
+    minPrice: 400,
     currency: "rub",
     type: "set",
   },
@@ -47,7 +51,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Головорез",
     image: thug,
     description: "В 6 броне стальной фронт 1 пластина и 2 фабриолита",
-    price: 375,
+    maxPrice: null,
+    minPrice: 375,
     currency: "rub",
     type: "set",
   },
@@ -57,7 +62,8 @@ export const EQUIPMENT: EquipmentType[] = [
     image: recoilKing,
     description:
       "В 6 броне стальной фронт 1 освинцованная ткань и 2 фабриолита",
-    price: 350,
+    maxPrice: null,
+    minPrice: 350,
     currency: "rub",
     type: "set",
   },
@@ -66,7 +72,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Классика",
     image: classic,
     description: "В классической 6 броне 1 освинцованная ткань",
-    price: 125,
+    maxPrice: null,
+    minPrice: 125,
     currency: "rub",
     type: "set",
   },
@@ -75,7 +82,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Налегке",
     image: light,
     description: "-",
-    price: 125,
+    maxPrice: null,
+    minPrice: 125,
     currency: "rub",
     type: "set",
   },
@@ -84,7 +92,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Быстрее всех",
     image: fastest,
     description: "-",
-    price: 100,
+    maxPrice: null,
+    minPrice: 100,
     currency: "rub",
     type: "set",
   },
@@ -93,7 +102,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Танк",
     image: tank,
     description: "-",
-    price: 250,
+    maxPrice: null,
+    minPrice: 250,
     currency: "rub",
     type: "set",
   },
@@ -102,7 +112,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Быстрое передвижение",
     image: fastTravel,
     description: "-",
-    price: 150,
+    maxPrice: null,
+    minPrice: 150,
     currency: "rub",
     type: "set",
   },
@@ -111,7 +122,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Танцующий фармила",
     image: dancingFarmer,
     description: "-",
-    price: 285,
+    maxPrice: null,
+    minPrice: 285,
     currency: "rub",
     type: "set",
   },
@@ -120,7 +132,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Много места",
     image: lotOfSpace,
     description: "-",
-    price: 50,
+    maxPrice: null,
+    minPrice: 50,
     currency: "rub",
     type: "set",
   },
@@ -129,7 +142,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Ворошиловский стрелок",
     image: voroshilovSharpshooter,
     description: "-",
-    price: 75,
+    maxPrice: null,
+    minPrice: 75,
     currency: "rub",
     type: "set",
   },
@@ -138,7 +152,8 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Сток без мк",
     image: stockWithoutMk,
     description: "-",
-    price: 100,
+    maxPrice: null,
+    minPrice: 100,
     currency: "rub",
     type: "set",
   },
@@ -147,8 +162,20 @@ export const EQUIPMENT: EquipmentType[] = [
     title: "Сток с радкой",
     image: stockWithRad,
     description: "-",
-    price: 95,
+    maxPrice: null,
+    minPrice: 95,
     currency: "rub",
     type: "set",
+  },
+  {
+    id: "weapon",
+    title: "Оружие",
+    image: noImage,
+    description:
+      "Оружие кобра и стальной фронт, которого нет в каталоге, кроме AWM, AMR и Mk14",
+    maxPrice: 70,
+    minPrice: 50,
+    currency: "rub",
+    type: "gun",
   },
 ];
