@@ -11,7 +11,7 @@ export const SERVICES: ServicesType[] = [
     id: "saveAllLoot",
     title: "Сопровождение",
     description: "Включает в себя файты и радку, плюс сейв всего лута с типов",
-    price: 150,
+    price: 125,
     currency: "rub",
   },
   {
@@ -19,21 +19,21 @@ export const SERVICES: ServicesType[] = [
     title: "Сопровождение",
     description:
       "Включает в себя файты и радку, что сможешь взять, то и унесёшь",
-    price: 125,
+    price: 90,
     currency: "rub",
   },
   {
     id: "fights",
     title: "Сопровождение",
     description: "Включает в себя файты",
-    price: 100,
+    price: 80,
     currency: "rub",
   },
   {
     id: "rad",
     title: "Сопровождение",
     description: "Включает в себя радку",
-    price: 100,
+    price: 80,
     currency: "rub",
   },
 ];
