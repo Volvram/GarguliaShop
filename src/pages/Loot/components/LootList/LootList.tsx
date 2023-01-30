@@ -1,6 +1,6 @@
 import React from "react";
 
-import background_1 from "@assets/img/background_1.htm";
+import background_loot from "@assets/img/background_loot.htm";
 import LootListStore from "@store/LootListStore";
 import { useQueryParamsStoreInit } from "@store/RootStore/hooks/useQueryParamsStoreInit";
 import rootStore from "@store/RootStore/instance";
@@ -43,7 +43,7 @@ const LootList: React.FC = () => {
   return (
     <div
       className={styles.lootList}
-      style={{ backgroundImage: `url(${background_1})` }}
+      style={{ backgroundImage: `url(${background_loot})` }}
     >
       <LootContent currentItems={lootListStore.currentItems} />
       <ReactPaginate

@@ -18,10 +18,10 @@ const FooterTelegram: React.FC = () => {
 
       <div className={styles.telegram_channel}>
         <a
-          href="https://t.me/nextGARGYLIA"
+          href="https://t.me/nextMETRO"
           className={styles.telegram_channel_a}
         >
-          https://t.me/nextGARGYLIA
+          https://t.me/nextMETRO
         </a>
       </div>
     </div>

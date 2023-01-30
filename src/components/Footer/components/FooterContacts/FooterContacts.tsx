@@ -14,10 +14,10 @@ const FooterContacts: React.FC = () => {
           <li className={styles.contacts_countries_country_contact}>
             Телеграм:{" "}
             <a
-              href="https://t.me/next_gargylia"
+              href="https://t.me/next_GARGYLIA"
               className={styles.contacts_countries_country_contact_a}
             >
-              @next_gargylia
+              @next_GARGYLIA
             </a>
           </li>
         </div>

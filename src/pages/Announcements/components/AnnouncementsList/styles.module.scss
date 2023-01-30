@@ -1,0 +1,48 @@
+@import "@styles/variables.scss";
+
+.announcementsList {
+    padding-top: $average-indent;
+    padding-bottom: $average-indent;
+    padding-left: $average-indent;
+    padding-right: $average-indent;
+
+    min-height: 700px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &_announcement {
+        padding: 30px;
+
+        background-color: $black-color;
+
+        opacity: 0.9;
+
+        border: 1px solid $golden-color;
+
+        min-height: 200px;
+
+        height: fit-content;
+
+        color: $white-color;
+
+        &_h {
+            padding-bottom: 10px;
+
+            font-size: 22px;
+            font-style: bold;
+        }
+
+        &_description {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: $phone-album-width) {
+    .announcementsList {
+        padding-left: $small-indent;
+        padding-right: $small-indent;
+    }
+}

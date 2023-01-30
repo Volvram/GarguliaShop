@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./App.scss";
+import Announcements from "@pages/Announcements/Announcements";
 import Services from "@pages/Services/Services";
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Loot />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/announcements" element={<Announcements />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
