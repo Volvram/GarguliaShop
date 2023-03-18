@@ -23,7 +23,7 @@
         border: 1px solid $golden-color;
 
         width: 320px;
-        min-height: 200px;
+        min-height: 240px;
 
         height: fit-content;
 
@@ -42,6 +42,8 @@
         }
 
         &_description {
+            text-align: justify;
+
             font-size: 18px;
         }
     }
