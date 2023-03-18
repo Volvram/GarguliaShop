@@ -1,6 +1,8 @@
 @import "@styles/variables.scss";
 
 .lootContent {
+    min-height: 600px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

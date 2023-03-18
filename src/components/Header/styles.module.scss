@@ -20,10 +20,14 @@
     &_sections {
         margin-left: auto;
 
+        align-items: center;
         display: flex;
+
         &_section {
             margin-left: 20px;
             margin-right: 20px;
+
+            width: fit-content;
 
             color: $black-color;
             text-decoration: none;
@@ -46,6 +50,27 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .header {
+        padding-left: $small-indent;
+        padding-right: $small-indent;
+
+        &_shop {
+            font-size: 22px;
+        }
+
+        &_sections {
+
+            &_section {
+                margin-left: 16px;
+                margin-right: 16px;
+
+                font-size: 22px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $phone-album-width) {
     .header {
         padding-left: $small-indent;
@@ -58,7 +83,27 @@
         &_sections {
 
             &_section {
+                margin-left: 8px;
+                margin-right: 8px;
+
                 font-size: $average-font;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        padding-left: $small-indent;
+        padding-right: $small-indent;
+
+        &_sections {
+
+            flex-direction: column;
+
+            &_section {
+                margin-top: 4px;
+                margin-bottom: 4px;
             }
         }
     }

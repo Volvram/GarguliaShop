@@ -10,6 +10,7 @@
 
     display: flex;
     justify-content: center;
+    align-content: flex-start;
     flex-wrap: wrap;
 
     &_announcement {
@@ -21,6 +22,7 @@
 
         border: 1px solid $golden-color;
 
+        width: 320px;
         min-height: 200px;
 
         height: fit-content;
@@ -28,7 +30,12 @@
         color: $white-color;
 
         &_h {
-            padding-bottom: 10px;
+            margin-bottom: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+
+            border-top: 1px solid $white-color;
+            border-bottom: 1px solid $white-color;
 
             font-size: 22px;
             font-style: bold;
@@ -44,5 +51,20 @@
     .announcementsList {
         padding-left: $small-indent;
         padding-right: $small-indent;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .announcementsList {
+
+        &_announcement {
+            &_h {
+                font-size: $average-font;
+            }
+    
+            &_description {
+                font-size: $small-font;
+            }
+        }
     }
 }

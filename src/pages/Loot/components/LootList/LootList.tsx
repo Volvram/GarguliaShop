@@ -18,18 +18,6 @@ const LootList: React.FC = () => {
   const lootListStore = useLocalStore(() => new LootListStore());
   useQueryParamsStoreInit();
 
-  React.useEffect(() => {
-    const initialPage = rootStore.query.getParam("page");
-    if (initialPage) {
-      lootListStore.setItemOffset(
-        lootListStore.itemsPerPage * (Number(initialPage) - 1)
-      );
-    } else {
-      lootListStore.setItemOffset(0);
-    }
-    lootListStore.changePage();
-  }, [lootListStore]);
-
   const handlePage = React.useCallback(
     (event: { selected: number }) => {
       lootListStore.handlePageClick(event);
@@ -39,6 +27,19 @@ const LootList: React.FC = () => {
     },
     [searchParams, setSearchParams, lootListStore]
   );
+
+  React.useEffect(() => {
+    handlePage({ selected: 0 });
+  }, [rootStore.query.getParam("loot-section")]);
+
+  React.useEffect(() => {
+    const initialPage = rootStore.query.getParam("page");
+    if (initialPage) {
+      handlePage({ selected: Number(initialPage) - 1 });
+    } else {
+      handlePage({ selected: 0 });
+    }
+  }, []);
 
   return (
     <div

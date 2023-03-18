@@ -2,6 +2,8 @@ import { EQUIPMENT, EquipmentType } from "@config/equipment";
 import { ILocalStore } from "@utils/useLocalStore";
 import { makeObservable, observable, action, computed } from "mobx";
 
+import rootStore from "./RootStore/instance";
+
 type PrivateFields =
   | "_currentItems"
   | "_pageCount"
@@ -75,11 +77,17 @@ class LootListStore implements ILocalStore {
   };
 
   changePage = () => {
+    const filteredEquipment = this._equipment.filter(
+      (item) => item.type === rootStore.query.getParam("loot-section")
+    );
+
     const endOffset = this._itemOffset + this._itemsPerPage;
     this._equipment.length !== 0
-      ? this.setCurrentItems(this._equipment.slice(this._itemOffset, endOffset))
+      ? this.setCurrentItems(
+          filteredEquipment.slice(this._itemOffset, endOffset)
+        )
       : this.setCurrentItems(null);
-    this.setPageCount(Math.ceil(this._equipment.length / this._itemsPerPage));
+    this.setPageCount(Math.ceil(filteredEquipment.length / this._itemsPerPage));
   };
 
   destroy() {}

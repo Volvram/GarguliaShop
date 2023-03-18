@@ -17,10 +17,7 @@ const FooterTelegram: React.FC = () => {
       <div className={styles.telegram_h}>Вступайте в телеграм канал</div>
 
       <div className={styles.telegram_channel}>
-        <a
-          href="https://t.me/nextMETRO"
-          className={styles.telegram_channel_a}
-        >
+        <a href="https://t.me/nextMETRO" className={styles.telegram_channel_a}>
           https://t.me/nextMETRO
         </a>
       </div>
