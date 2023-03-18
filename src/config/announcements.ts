@@ -13,8 +13,7 @@ export const ANNOUNCEMENTS: AnnouncemetsType[] = [
   {
     id: "inventoryBulkPurchase",
     name: "Оптовая покупка инвентаря",
-    description:
-      `Скупайте весь инвентарь владельца магазина всего за 1000 рублей!`,
+    description: `Скупайте весь инвентарь владельца магазина всего за 1000 рублей!`,
   },
   {
     id: "lootBoxBulkPurchase",
