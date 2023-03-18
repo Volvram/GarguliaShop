@@ -5,6 +5,7 @@ import fastest from "@assets/img/fastest.jpg";
 import fastTravel from "@assets/img/fastTravel.jpg";
 import light from "@assets/img/light.jpg";
 import localKiller from "@assets/img/localKiller.jpg";
+import lootBox from "@assets/img/lootBox.jpg";
 import lotOfSpace from "@assets/img/lotOfSpace.jpg";
 import noImage from "@assets/img/noImage.jpg";
 import recoilKing from "@assets/img/recoilKing.jpg";
@@ -180,31 +181,56 @@ export const EQUIPMENT: EquipmentType[] = [
   },
   {
     id: "commonLootBox",
-    title: "Простой лутбокс",
-    image: noImage,
-    description: "Скоро появится",
+    title: "Лутбокс обычный",
+    image: lootBox,
+    description:
+      "Входят броня или шлем 3-5 лвл, оружие улучшенное или целое. Делается 2 прокрута на броню и оружие",
+    maxPrice: null,
+    minPrice: 20,
+    currency: "rub",
+    type: "lootBox",
+  },
+  {
+    id: "upgradedLootBox",
+    title: "Лутбокс улучшенный",
+    image: lootBox,
+    description:
+      "Входят броня или шлем 4-6 лвл, оружие улучшенное или высшее. Делается 2 прокрута на броню и оружие",
+    maxPrice: null,
+    minPrice: 60,
+    currency: "rub",
+    type: "lootBox",
+  },
+  {
+    id: "epicLootBox",
+    title: "Лутбокс эпический",
+    image: lootBox,
+    description:
+      "Входят броня и шлем 6 лвл, в том числе стальной фронт и кобра. Делается 2 прокрута на броню и шлем",
+    maxPrice: null,
+    minPrice: 80,
+    currency: "rub",
+    type: "lootBox",
+  },
+  {
+    id: "mythicLootBox",
+    title: "Лутбокс мифический",
+    image: lootBox,
+    description:
+      "Входят броня и шлем 6 лвл стальной фронт и кобра (без обыкновенного). Делается 2 прокрута на броню и шлем",
     maxPrice: null,
     minPrice: 100,
     currency: "rub",
     type: "lootBox",
   },
   {
-    id: "rareLootBox",
-    title: "Редкий лутбокс",
-    image: noImage,
-    description: "Скоро появится",
+    id: "legendaryLootBox",
+    title: "Лутбокс легенды",
+    image: lootBox,
+    description:
+      "Гарантированная высшая мк 14. Входят броня и шлем 6 лвл, в том числе СТ, КБ, золотая, золотая СТ, золотая КБ. Делается 2 прокрута на броню и шлем",
     maxPrice: null,
-    minPrice: 150,
-    currency: "rub",
-    type: "lootBox",
-  },
-  {
-    id: "epicLootBox",
-    title: "Эпический лутбокс",
-    image: noImage,
-    description: "Скоро появится",
-    maxPrice: null,
-    minPrice: 200,
+    minPrice: 165,
     currency: "rub",
     type: "lootBox",
   },
